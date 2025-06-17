@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/john-shepherdson/github-markup-scanner:
+      branch: main
+      repo: https://github.com/john-shepherdson/github-markup-scanner.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-green-numbat.sh
+        container: qc.acc_bluesy-amaranth-snail
+  QC.Doc:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-flax-anteater.sh
+        container: qc.doc_homely-ultramarine-gerbil
+      github.com/john-shepherdson/github-markup-scanner git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-aquamarine-forest.sh
+        container: qc.doc_randy-linen-dugong
+      github.com/john-shepherdson/github-markup-scanner markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-pumpkin-fox.sh
+        container: qc.doc_shaggy-olivine-forest
+  QC.Lic:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-turquoise-foxhound.sh
+        container: qc.lic_clammy-gamboge-barracuda
+  QC.Met:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-smalt-fowl.sh
+        container: qc.met_gamy-apricot-russel
+  QC.Sty:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-bistre-chin.sh
+        container: qc.sty_stuffy-ecru-toad
+      github.com/john-shepherdson/github-markup-scanner jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-violet-shrew.sh
+        container: qc.sty_craggy-gold-mastiff
+  QC.Ver:
+    repos:
+      github.com/john-shepherdson/github-markup-scanner get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-ruby-chamois.sh
+        container: qc.ver_gimpy-jade-mastiff
+timeout: 5400
