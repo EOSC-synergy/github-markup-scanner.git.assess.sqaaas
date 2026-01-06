@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/john-shepherdson/github-markup-scanner git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-green-numbat.sh
-        container: qc.acc_bluesy-amaranth-snail
+        - /usr/bin/env sh .sqa/script.slaphappy-crimson-mammoth.sh
+        container: qc.acc_sickly-plum-macaw
   QC.Doc:
     repos:
       github.com/john-shepherdson/github-markup-scanner find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-flax-anteater.sh
-        container: qc.doc_homely-ultramarine-gerbil
+        - /usr/bin/env sh .sqa/script.tasty-periwinkle-dodo.sh
+        container: qc.doc_sleazy-periwinkle-beaver
       github.com/john-shepherdson/github-markup-scanner git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-aquamarine-forest.sh
-        container: qc.doc_randy-linen-dugong
+        - /usr/bin/env sh .sqa/script.wiggy-cardinal-orangutan.sh
+        container: qc.doc_surly-goldenrod-fox
       github.com/john-shepherdson/github-markup-scanner markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-pumpkin-fox.sh
-        container: qc.doc_shaggy-olivine-forest
+        - /usr/bin/env sh .sqa/script.dorky-denim-beaver.sh
+        container: qc.doc_boozy-pumpkin-gecko
   QC.Lic:
     repos:
       github.com/john-shepherdson/github-markup-scanner licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-turquoise-foxhound.sh
-        container: qc.lic_clammy-gamboge-barracuda
+        - /usr/bin/env sh .sqa/script.craggy-mustard-monkey.sh
+        container: qc.lic_sleepy-orchid-eel
   QC.Met:
     repos:
       github.com/john-shepherdson/github-markup-scanner cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-smalt-fowl.sh
-        container: qc.met_gamy-apricot-russel
+        - /usr/bin/env sh .sqa/script.snazzy-scarlet-gecko.sh
+        container: qc.met_gamy-ruby-millipede
   QC.Sty:
     repos:
       github.com/john-shepherdson/github-markup-scanner checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-bistre-chin.sh
-        container: qc.sty_stuffy-ecru-toad
+        - /usr/bin/env sh .sqa/script.shaky-xanthic-barnacle.sh
+        container: qc.sty_scummy-alizarin-fish
       github.com/john-shepherdson/github-markup-scanner jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-violet-shrew.sh
-        container: qc.sty_craggy-gold-mastiff
+        - /usr/bin/env sh .sqa/script.silly-green-cheetah.sh
+        container: qc.sty_flabby-heliotrope-bison
   QC.Ver:
     repos:
       github.com/john-shepherdson/github-markup-scanner get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-ruby-chamois.sh
-        container: qc.ver_gimpy-jade-mastiff
+        - /usr/bin/env sh .sqa/script.snappy-viridian-pinscher.sh
+        container: qc.ver_ready-russet-skunk
 timeout: 5400
